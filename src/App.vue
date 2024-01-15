@@ -1,11 +1,14 @@
 <script >
-
+import ProjectsIndex from './pages/projects/Index.vue'
+export default {
+  components: {
+    ProjectsIndex
+  }
+}
 </script>
 
 <template>
-  <div class="container">
-    Hello
-  </div>
+  <ProjectsIndex />
 </template>
 
 <style></style>
