@@ -7,6 +7,11 @@
                 <p v-for="cardTehcnology in cardTechnologies">{{ cardTehcnology.name }}</p>
             </div>
             <p>{{ project.content }}</p>
+            <p>
+                <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">
+                    Details
+                </router-link>
+            </p>
         </div>
 
     </div>

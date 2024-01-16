@@ -7,7 +7,7 @@
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+                        <router-link :to="{ name: 'projects' }">Portfolio</router-link>
                     </li>
                 </ul>
             </nav>
