@@ -1,10 +1,14 @@
 <template>
     <div class="card project-card">
-        <h3>{{ project.title }}</h3>
-        <p v-if="project.type">{{ project.type.name }}</p>
-        <div v-if="project.technologies">
-            <p v-for="cardTehcnology in cardTechnologies">{{ cardTehcnology.name }}</p>
+        <h2 class="card-title">{{ project.title }}</h2>
+        <div class="card-body">
+            <h4 v-if="project.type">{{ project.type.name }}</h4>
+            <div v-if="project.technologies" class="flex">
+                <p v-for="cardTehcnology in cardTechnologies">{{ cardTehcnology.name }}</p>
+            </div>
+            <p>{{ project.content }}</p>
         </div>
+
     </div>
 </template>
 
@@ -24,4 +28,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.flex {
+    display: flex;
+    column-gap: 1rem;
+}
+</style>

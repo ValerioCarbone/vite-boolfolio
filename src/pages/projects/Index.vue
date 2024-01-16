@@ -28,9 +28,29 @@ export default {
 
 <template>
     <div class="container">
-        <h1>Your projects</h1>
-        <ProjectCard v-for="project in projects" :project="project" :key="project.id" />
+        <h1 class="section-title">Your projects</h1>
+        <div class="row">
+            <ProjectCard v-for="project in projects" :project="project" :key="project.id" class="col-3" />
+        </div>
     </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.col-3 {
+    width: calc((100% / 3) - 20px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container {
+    padding: 0 20px;
+}
+</style>
