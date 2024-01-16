@@ -37,13 +37,15 @@ export default {
 
 <style lang="scss" scoped>
 .col-3 {
-    width: calc((100% / 3) - 20px);
+    width: calc((100% / 3) - 39px);
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1rem;
+    row-gap: 1rem;
+    justify-content: space-between;
+
 }
 
 .section-title {
@@ -52,5 +54,6 @@ export default {
 
 .container {
     padding: 0 20px;
+    margin: 0 auto;
 }
 </style>

@@ -32,5 +32,14 @@ export default {
 .flex {
     display: flex;
     column-gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.project-card {
+    background-color: rgb(233, 231, 231);
+    border: 2px solid rgb(196, 194, 194);
+    border-radius: 40px;
+    padding: 12px;
 }
 </style>
