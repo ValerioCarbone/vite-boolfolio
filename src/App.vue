@@ -11,4 +11,6 @@ export default {
   <ProjectsIndex />
 </template>
 
-<style></style>
+<style lang="scss">
+@use "./style/general.scss";
+</style>
