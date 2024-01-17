@@ -20,6 +20,4 @@ export default {
     font-size: 40px;
     height: calc(100% - 50px);
 }
-
-.error {}
 </style>

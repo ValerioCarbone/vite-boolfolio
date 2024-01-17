@@ -1,22 +1,14 @@
 <template>
-    <div class="card project-card">
+    <div class="card type-card">
         <h3 class="card-title">{{ project.title }}</h3>
         <div class="card-body">
-
-            <p v-if="project.type">
-                <router-link :to="{ name: 'type.archive', params: { slug: project.type.slug } }">
-                    {{ project.type.name }}
-                </router-link>
-            </p>
+            <h3>{{ project.name }}</h3>
             <div v-if="project.technologies" class="flex">
                 <p v-for="cardTehcnology in cardTechnologies">
                     <strong> {{ cardTehcnology.name }} </strong>
                 </p>
             </div>
             <p>{{ project.content }}</p>
-            <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">
-                Details
-            </router-link>
         </div>
 
     </div>
@@ -24,19 +16,19 @@
 
 <script>
 export default {
-    data() {
-        return {
-            cardTechnologies: this.project.technologies
-        }
-    },
     props: {
         project: {
             type: Object,
             required: true
         }
     },
+    data() {
+        return {
+            cardTechnologies: this.project.technologies
+        }
+    },
     mounted() {
-        console.log(this.project.slug)
+        console.log(this.project.technologies)
     }
 }
 </script>
@@ -49,7 +41,7 @@ export default {
 
 }
 
-.project-card {
+.type-card {
     background-color: rgb(233, 231, 231);
     border: 2px solid rgb(196, 194, 194);
     border-radius: 40px;
