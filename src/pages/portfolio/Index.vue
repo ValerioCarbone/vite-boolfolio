@@ -16,7 +16,7 @@ export default {
             axios.get(`${this.BASE_URL}/projects`)
                 .then((res) => {
                     console.log(res.data.results)
-                    this.projects = res.data.results
+                    this.projects = res.data.results.data
                 })
         }
     },
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="portfolio">
         <div class="container">
             <h1 class="section-title title">Your projects</h1>
             <div class="row">
@@ -38,24 +38,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../style/partials/variables' as *;
+
+
+
 .col-3 {
-    width: calc((100% / 3) - 39px);
+    width: calc((100% / 3) - 20px);
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 1rem;
-    justify-content: space-evenly;
-
+    gap: 20px 30px;
 }
 
 .section-title {
     padding: 24px 0;
+    color: $white-light-blue;
 }
 
 .container {
     padding: 0 20px;
     margin: 0 auto;
+
 }
 </style>

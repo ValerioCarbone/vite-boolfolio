@@ -10,4 +10,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
+.page-title {
+    color: $white-light-blue;
+}
+</style>

@@ -4,7 +4,7 @@
         <div>
             <h3>{{ project.type.name }}</h3>
             <ul class="d-flex technologies">
-                <li v-for="technology in project.technologies">
+                <li v-for="technology in project.technologies" :key="technology.id">
                     {{ technology.name }}
                 </li>
             </ul>
