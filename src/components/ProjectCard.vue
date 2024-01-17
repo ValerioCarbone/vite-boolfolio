@@ -1,10 +1,12 @@
 <template>
     <div class="card project-card">
-        <h2 class="card-title">{{ project.title }}</h2>
+        <h3 class="card-title">{{ project.title }}</h3>
         <div class="card-body">
             <h4 v-if="project.type">{{ project.type.name }}</h4>
             <div v-if="project.technologies" class="flex">
-                <p v-for="cardTehcnology in cardTechnologies">{{ cardTehcnology.name }}</p>
+                <p v-for="cardTehcnology in cardTechnologies">
+                    <strong> {{ cardTehcnology.name }} </strong>
+                </p>
             </div>
             <p>{{ project.content }}</p>
             <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">

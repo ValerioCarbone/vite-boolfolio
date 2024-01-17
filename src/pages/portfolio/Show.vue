@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h1>{{ project.title }}</h1>
+    <div class="container" v-if="project">
+        <h1 class="project-title ">{{ project.title }}</h1>
         <div>
             <h3>{{ project.type.name }}</h3>
-            <ul>
+            <ul class="d-flex technologies">
                 <li v-for="technology in project.technologies">
                     {{ technology.name }}
                 </li>
@@ -38,9 +38,22 @@ export default {
         this.fetchProject()
     },
     mounted() {
-        console.log(this.slug)
+        console.log(this.slug),
+            console.log(this.$route)
+
     }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.project-title {}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.technologies {
+    column-gap: 1rem;
+}
+</style>

@@ -2,7 +2,7 @@
     <div>
         <div>
             <nav>
-                <ul>
+                <ul class="d-flex navbar">
                     <li>
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
@@ -21,4 +21,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.navbar {
+    column-gap: 2rem;
+    justify-content: space-evenly;
+    padding: 12px 0;
+}
+</style>

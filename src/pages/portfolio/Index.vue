@@ -27,12 +27,14 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h1 class="section-title">Your projects</h1>
-        <div class="row">
-            <ProjectCard v-for="project in projects" :project="project" :key="project.id" class="col-3" />
+    <section>
+        <div class="container">
+            <h1 class="section-title title">Your projects</h1>
+            <div class="row">
+                <ProjectCard v-for="project in projects" :project="project" :key="project.id" class="col-3" />
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -49,7 +51,6 @@ export default {
 }
 
 .section-title {
-    text-align: center;
     padding: 24px 0;
 }
 
