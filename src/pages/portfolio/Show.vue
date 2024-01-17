@@ -5,27 +5,31 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
     props: {
-        project: {
-            slug: String
-        }
+        slug: String
     },
     data() {
         return {
-            post: null,
+            project: null,
             BASE_URL: 'http://127.0.0.1:8000/api'
         }
     },
     methods: {
         fetchProject() {
-            axios.get(`${this.BASE_URL}./projects/${this.slug}`)
-                .then((res) => {
+            axios.get(`${this.BASE_URL}/projects/${this.slug}`)
+                .then(res => {
                     console.log(res.data.project)
                 })
         }
+    },
+    created() {
+        this.fetchProject()
+    },
+    mounted() {
+        console.log(this.slug)
     }
 }
 </script>

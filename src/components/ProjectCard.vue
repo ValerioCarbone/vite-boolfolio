@@ -7,11 +7,9 @@
                 <p v-for="cardTehcnology in cardTechnologies">{{ cardTehcnology.name }}</p>
             </div>
             <p>{{ project.content }}</p>
-            <p>
-                <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">
-                    Details
-                </router-link>
-            </p>
+            <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">
+                Details
+            </router-link>
         </div>
 
     </div>
@@ -29,6 +27,9 @@ export default {
             type: Object,
             required: true
         }
+    },
+    mounted() {
+        console.log(this.project.slug)
     }
 }
 </script>

@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Homepage from './pages/Homepage.vue'
-import ProjectsIndex from './pages/portfolio/Index.vue'
-import ProjectsShow from './pages/portfolio/Show.vue'
+import ProjectIndex from './pages/portfolio/Index.vue'
+import ProjectShow from './pages/portfolio/Show.vue'
 
 
 const router = createRouter({
@@ -15,21 +15,15 @@ const router = createRouter({
         },
         {
             path: '/portfolio',
-            name: 'projects',
-            component: ProjectsIndex,
+            name: 'projects.index',
+            component: ProjectIndex,
         },
         {
             path: '/portfolio/:slug',
             name: 'projects.show',
-            component: ProjectsShow,
+            props: true,
+            component: ProjectShow,
         }
     ]
 })
-
 export { router }
-
-// {
-//     path:,
-//     name:,
-//     component:,
-// }
