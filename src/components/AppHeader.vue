@@ -3,10 +3,10 @@
         <div>
             <nav>
                 <ul class="d-flex navbar">
-                    <li>
+                    <li class="navbar-item">
                         <router-link :to="{ name: 'home' }">Home</router-link>
                     </li>
-                    <li>
+                    <li class="navbar-item">
                         <router-link :to="{ name: 'projects.index' }">Portfolio</router-link>
                     </li>
                 </ul>
@@ -25,6 +25,18 @@ export default {
 .navbar {
     column-gap: 2rem;
     justify-content: space-evenly;
-    padding: 12px 0;
+    height: 50px;
+    align-items: center;
+}
+
+.navbar-item {
+    font-size: 20px;
+    color: rgb(5, 5, 106);
+    font-weight: 600px;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
 }
 </style>
