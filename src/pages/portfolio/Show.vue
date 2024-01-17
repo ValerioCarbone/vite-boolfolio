@@ -31,6 +31,12 @@ export default {
             axios.get(`${this.BASE_URL}/projects/${this.slug}`)
                 .then(res => {
                     this.project = res.data.project
+                }).catch((error) => {
+                    console.log('post not found', error.response)
+
+                    if (error.response.status === 404) {
+                        this.$router.push({ name: 'not-found' })
+                    }
                 })
         }
     },
