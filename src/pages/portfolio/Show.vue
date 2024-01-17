@@ -1,6 +1,15 @@
 <template>
     <div>
-
+        <h1>{{ project.title }}</h1>
+        <div>
+            <h3>{{ project.type.name }}</h3>
+            <ul>
+                <li v-for="technology in project.technologies">
+                    {{ technology.name }}
+                </li>
+            </ul>
+            <p v-html="project.content"></p>
+        </div>
     </div>
 </template>
 
@@ -21,7 +30,7 @@ export default {
         fetchProject() {
             axios.get(`${this.BASE_URL}/projects/${this.slug}`)
                 .then(res => {
-                    console.log(res.data.project)
+                    this.project = res.data.project
                 })
         }
     },
