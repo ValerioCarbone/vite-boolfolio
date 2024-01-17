@@ -54,7 +54,7 @@ export default {
 
 .section-title {
     padding: 24px 0;
-    color: $white-light-blue;
+    color: $white;
 }
 
 .container {

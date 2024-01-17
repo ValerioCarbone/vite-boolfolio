@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .navbar {
     column-gap: 2rem;
     justify-content: space-evenly;
@@ -31,7 +33,7 @@ export default {
 
 .navbar-item {
     font-size: 20px;
-    color: rgb(5, 5, 106);
+    color: $white;
     font-weight: 600px;
 }
 

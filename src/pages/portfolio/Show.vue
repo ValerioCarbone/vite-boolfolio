@@ -1,14 +1,16 @@
 <template>
     <div class="container" v-if="project">
-        <h1 class="project-title ">{{ project.title }}</h1>
-        <div>
-            <h3>{{ project.type.name }}</h3>
-            <ul class="d-flex technologies">
-                <li v-for="technology in project.technologies" :key="technology.id">
-                    {{ technology.name }}
-                </li>
-            </ul>
-            <p v-html="project.content"></p>
+        <div class="project">
+            <h1 class="project-title ">{{ project.title }}</h1>
+            <div>
+                <h3>{{ project.type.name }}</h3>
+                <ul class="d-flex technologies">
+                    <li v-for="technology in project.technologies" :key="technology.id">
+                        {{ technology.name }}
+                    </li>
+                </ul>
+                <p v-html="project.content"></p>
+            </div>
         </div>
     </div>
 </template>
@@ -52,7 +54,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project-title {}
+@use '../../style/partials/variables' as *;
+
+.project {
+    color: $white;
+}
 
 .container {
     max-width: 800px;

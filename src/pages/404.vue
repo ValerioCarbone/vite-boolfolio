@@ -16,7 +16,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white-light-blue;
+    color: $white;
     font-size: 40px;
     height: calc(100% - 50px);
 }

@@ -14,6 +14,6 @@ export default {
 @use '../style/partials/variables' as *;
 
 .page-title {
-    color: $white-light-blue;
+    color: $white;
 }
 </style>
