@@ -13,14 +13,19 @@
             </div>
         </div>
     </div>
+    <Loading v-if="!project"></Loading>
 </template>
 
 <script>
 import axios from 'axios'
+import Loading from '../../components/Loading.vue'
 
 export default {
     props: {
         slug: String
+    },
+    components: {
+        Loading
     },
     data() {
         return {
@@ -32,6 +37,7 @@ export default {
         fetchProject() {
             axios.get(`${this.BASE_URL}/projects/${this.slug}`)
                 .then(res => {
+                    console.log(res.data.project)
                     this.project = res.data.project
                 }).catch((error) => {
                     console.log('post not found', error.response)

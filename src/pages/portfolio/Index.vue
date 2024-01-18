@@ -1,9 +1,11 @@
 <script >
 import axios from 'axios';
 import ProjectCard from '../../components/ProjectCard.vue'
+import Loading from '../../components/Loading.vue'
 export default {
     components: {
-        ProjectCard
+        ProjectCard,
+        Loading
     },
     data() {
         return {
@@ -15,7 +17,7 @@ export default {
         fetchProjects() {
             axios.get(`${this.BASE_URL}/projects`)
                 .then((res) => {
-                    console.log(res.data.results)
+
                     this.projects = res.data.results.data
                 })
         }
@@ -34,6 +36,7 @@ export default {
                 <ProjectCard v-for="project in projects" :project="project" :key="project.id" class="col-3" />
             </div>
         </div>
+        <Loading v-if="projects.length < 1"></Loading>
     </section>
 </template>
 

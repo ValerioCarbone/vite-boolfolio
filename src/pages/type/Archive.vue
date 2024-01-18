@@ -6,18 +6,21 @@
                 <TypeCard v-for="project in projects" :key="project.id" :project="project" class="col-3"></TypeCard>
             </div>
         </div>
+        <Loading v-if="projects.length < 1"></Loading>
     </section>
 </template>
 
 <script>
 import axios from 'axios';
 import TypeCard from '../../components/TypeCard.vue'
+import Loading from '../../components/Loading.vue'
 export default {
     props: {
         slug: String
     },
     components: {
-        TypeCard
+        TypeCard,
+        Loading
     },
     data() {
         return {
