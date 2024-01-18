@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .section-title {
     color: white;
-    padding: 24px 0;
+    padding: 18px 0;
 }
 
 .row {
@@ -64,6 +64,7 @@ export default {
 .container {
     padding: 0 20px;
     margin: 0 auto;
+    margin-bottom: 18px;
 
 }
 </style>

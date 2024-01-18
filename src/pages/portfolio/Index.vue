@@ -52,12 +52,14 @@ export default {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 30px;
+    gap: 50px 30px;
+    margin-bottom: auto;
 }
 
 .section-title {
-    padding: 24px 0;
-    color: $white;
+    padding: 18px 0;
+    font-size: 60px;
+    color: white;
 }
 
 .container {

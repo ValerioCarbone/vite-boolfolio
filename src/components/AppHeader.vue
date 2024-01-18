@@ -32,9 +32,12 @@ export default {
 }
 
 .navbar-item {
-    font-size: 20px;
+    font-size: 26px;
     color: $white;
     font-weight: 600px;
+    background: -webkit-linear-gradient(#ffffff, #cf9fce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 a {

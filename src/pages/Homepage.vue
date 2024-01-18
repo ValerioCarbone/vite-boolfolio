@@ -15,5 +15,6 @@ export default {
 
 .page-title {
     color: $white;
+    font-size: 50px;
 }
 </style>
