@@ -20,8 +20,9 @@ export default {
 @use "./style/general.scss";
 
 .wrapper {
-  background-color: #31ceff;
-  background-image: linear-gradient(180deg, #31ceff 0%, #E0C3FC 70%);
+  background-color: #17c1dc;
+  background-image: linear-gradient(180deg, #17c1dc 0%, #ffcefe 100%);
+
 
   height: 100vh;
   overflow-y: auto;
